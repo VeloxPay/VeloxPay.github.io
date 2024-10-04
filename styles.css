@@ -84,7 +84,7 @@ h1, h2, h3 {
 }
 
 .feature-image {
-  width: 80px; /* Smaller image to avoid breaking the layout */
+  width: 100%; /* Smaller image to avoid breaking the layout */
   height: auto;
   margin-bottom: 15px;
   display: block;
