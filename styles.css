@@ -54,7 +54,7 @@ h1, h2, h3 {
 
 /* Features Section */
 .features-section {
-  background-color: #F0F0F0; /* Subtle light gray for clean look */
+  background-color: #F0F0F0; /* Light Gray for Clean Look */
   padding: 50px 0;
 }
 
@@ -62,24 +62,53 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .feature {
-  background-color: #E1E1E1; /* Silver shade from logo */
+  background-color: #E1E1E1; /* Silver */
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+  flex: 1; /* Ensures the feature boxes stretch evenly */
+  min-width: 250px;
+  max-width: 350px;
 }
 
 .feature h3 {
-  color: #003C7E; /* Matching dark blue for feature titles */
+  color: #003C7E; /* Blue for Feature Titles */
+}
+
+.feature p {
+  margin-top: 10px;
 }
 
 .feature-image {
-  width: 100%;
+  width: 80px; /* Smaller image to avoid breaking the layout */
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%; /* Full width for mobile screens */
+    max-width: 500px;
+  }
+
+  .feature-image {
+    width: 60px; /* Smaller image for mobile */
+  }
+}
+
 
 /* Mission & Vision */
 .mission-section, .vision-section {
