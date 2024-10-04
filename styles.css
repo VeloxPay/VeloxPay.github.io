@@ -7,7 +7,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: #1F4E79;
+  color: #0056A3; /* Logo's Blue */
 }
 
 .container {
@@ -18,14 +18,21 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
+  background: linear-gradient(to right, #0056A3, #00c6ff); /* Logo's Blue Gradient */
   color: white;
   padding: 100px 0;
   text-align: center;
 }
 
+/* Logo in Hero Section */
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
 .cta-button {
-  background-color: #0072ff;
+  background-color: #00C6FF; /* Lighter Blue from Logo */
   color: white;
   padding: 10px 20px;
   margin: 20px 10px;
@@ -33,6 +40,11 @@ h1, h2, h3 {
   border-radius: 4px;
   text-transform: uppercase;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056A3; /* Darker Blue from Logo */
 }
 
 .cta-button.secondary {
@@ -41,6 +53,11 @@ h1, h2, h3 {
 }
 
 /* Features Section */
+.features-section {
+  background-color: #F5F5F5; /* Light Gray for Clean Look */
+  padding: 50px 0;
+}
+
 .features-grid {
   display: flex;
   justify-content: space-between;
@@ -48,15 +65,19 @@ h1, h2, h3 {
 }
 
 .feature {
-  background-color: #f4f4f4;
+  background-color: #E0E0E0; /* Silver from Logo */
   padding: 20px;
   border-radius: 8px;
   text-align: center;
 }
 
+.feature h3 {
+  color: #0056A3; /* Blue for Feature Titles */
+}
+
 /* Mission & Vision */
 .mission-section, .vision-section {
-  background-color: #0072ff;
+  background-color: #0056A3; /* Dark Blue from Logo */
   color: white;
   padding: 50px 0;
   text-align: center;
@@ -64,7 +85,7 @@ h1, h2, h3 {
 
 /* Footer */
 .footer {
-  background-color: #1F4E79;
+  background-color: #003A70; /* Darker Shade of Blue for Footer */
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -76,11 +97,3 @@ h1, h2, h3 {
     flex-direction: column;
   }
 }
-
-/* Logo in Hero Section */
-.logo {
-  width: 150px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
