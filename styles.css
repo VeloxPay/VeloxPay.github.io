@@ -7,7 +7,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: #0A4B8E; /* Adjusted to match logo's deeper blue */
+  color: #E1E1E1; /* Lighter gray for contrast with dark backgrounds */
 }
 
 .container {
@@ -18,21 +18,24 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(to right, #003C7E, #0096C7); /* Logo-inspired gradient */
+  background: linear-gradient(to right, #012E4A, #0282B4); /* Darkened gradient based on logo */
   color: white;
   padding: 100px 0;
   text-align: center;
 }
 
-/* Logo in Hero Section */
 .logo {
   width: 150px;
   height: auto;
   margin-bottom: 20px;
 }
 
+h1 {
+  color: #00C6FF; /* Lighter blue from the logo to match */
+}
+
 .cta-button {
-  background-color: #00C6FF; /* Lighter blue from logo */
+  background-color: #00C6FF; /* Lighter blue for main call-to-action */
   color: white;
   padding: 10px 20px;
   margin: 20px 10px;
@@ -44,17 +47,38 @@ h1, h2, h3 {
 }
 
 .cta-button:hover {
-  background-color: #003C7E; /* Darker blue from logo */
+  background-color: #005F73; /* Darker tone for hover */
 }
 
 .cta-button.secondary {
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid #00C6FF; /* Keeping secondary buttons light blue to stand out */
+  color: #00C6FF;
+}
+
+.cta-button.secondary:hover {
+  background-color: #00C6FF;
+  color: white;
+}
+
+/* About Section */
+.about-section {
+  background-color: #F8F9FA; /* Light neutral background */
+  color: #012E4A; /* Darker blue for text */
+  padding: 50px 0;
+}
+
+.about-section h2 {
+  color: #012E4A; /* Dark blue title */
+}
+
+.about-section p {
+  color: #4F4F4F; /* Neutral gray for text */
 }
 
 /* Features Section */
 .features-section {
-  background-color: #F0F0F0; /* Subtle light gray for clean look */
+  background-color: #E1E1E1; /* Light gray for clean look */
   padding: 50px 0;
 }
 
@@ -65,36 +89,42 @@ h1, h2, h3 {
 }
 
 .feature {
-  background-color: #E1E1E1; /* Silver shade from logo */
+  background-color: #F0F0F0; /* Subtle off-white for features */
   padding: 20px;
   border-radius: 8px;
   text-align: center;
 }
 
 .feature h3 {
-  color: #003C7E; /* Matching dark blue for feature titles */
-}
-
-.feature-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  color: #012E4A; /* Matching dark blue for feature titles */
 }
 
 /* Mission & Vision */
 .mission-section, .vision-section {
-  background-color: #003C7E; /* Dark blue from logo */
+  background-color: #012E4A; /* Dark blue from logo */
   color: white;
   padding: 50px 0;
   text-align: center;
 }
 
+.mission-section h2, .vision-section h2 {
+  color: #00C6FF; /* Lighter blue for headings */
+}
+
+.mission-section p, .vision-section p {
+  color: #E1E1E1; /* Lighter gray for body text */
+}
+
 /* Footer */
 .footer {
-  background-color: #002850; /* Darker shade of blue for footer */
+  background-color: #011A34; /* Dark navy for footer */
   color: white;
   padding: 20px 0;
   text-align: center;
+}
+
+.footer p {
+  color: #E1E1E1;
 }
 
 /* Responsive */
