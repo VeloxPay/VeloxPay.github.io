@@ -76,3 +76,11 @@ h1, h2, h3 {
     flex-direction: column;
   }
 }
+
+/* Logo in Hero Section */
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
