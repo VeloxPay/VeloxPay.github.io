@@ -4,10 +4,11 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
-  color: #0056A3; /* Logo's Blue */
+  color: #003A70; /* Adjusted Blue matching the logo */
 }
 
 .container {
@@ -18,10 +19,11 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(to right, #0056A3, #00c6ff); /* Logo's Blue Gradient */
+  background: linear-gradient(to right, #003A70, #0079A3); /* Darker, deeper blue gradient from the logo */
   color: white;
   padding: 100px 0;
   text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Logo in Hero Section */
@@ -29,10 +31,11 @@ h1, h2, h3 {
   width: 150px;
   height: auto;
   margin-bottom: 20px;
+  animation: bounceIn 1s ease-in-out;
 }
 
 .cta-button {
-  background-color: #00C6FF; /* Lighter Blue from Logo */
+  background-color: #0079A3; /* Matching the logo's secondary lighter blue */
   color: white;
   padding: 10px 20px;
   margin: 20px 10px;
@@ -41,10 +44,11 @@ h1, h2, h3 {
   text-transform: uppercase;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 .cta-button:hover {
-  background-color: #0056A3; /* Darker Blue from Logo */
+  background-color: #003A70; /* Deeper blue from logo */
 }
 
 .cta-button.secondary {
@@ -54,8 +58,9 @@ h1, h2, h3 {
 
 /* Features Section */
 .features-section {
-  background-color: #F5F5F5; /* Light Gray for Clean Look */
+  background-color: #F5F5F5; /* Light Gray for a clean look */
   padding: 50px 0;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 .features-grid {
@@ -65,30 +70,67 @@ h1, h2, h3 {
 }
 
 .feature {
-  background-color: #E0E0E0; /* Silver from Logo */
+  background-color: #E0E0E0; /* Silver to match the logo’s metallic look */
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .feature h3 {
-  color: #0056A3; /* Blue for Feature Titles */
+  color: #003A70; /* Blue for feature titles */
+}
+
+/* Scroll animation */
+.feature.in-view {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* Mission & Vision */
 .mission-section, .vision-section {
-  background-color: #0056A3; /* Dark Blue from Logo */
+  background-color: #003A70; /* Dark Blue from Logo */
   color: white;
   padding: 50px 0;
   text-align: center;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 /* Footer */
 .footer {
-  background-color: #003A70; /* Darker Shade of Blue for Footer */
+  background-color: #002f4b; /* Darker shade for footer */
   color: white;
   padding: 20px 0;
   text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* Responsive */
