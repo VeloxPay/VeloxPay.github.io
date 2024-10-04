@@ -12,7 +12,8 @@ h1, h2, h3 {
 }
 
 .container {
-  width: 90%;
+  width: 95%;
+  overflow: hidden;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -82,6 +83,7 @@ h1, h2, h3 {
   min-width: 250px;
   max-width: 350px;
   margin: 10px; /* Added margin for better spacing */
+  word-wrap: break-word;
 }
 
 .feature h3 {
