@@ -5,9 +5,12 @@ body {
   padding: 0;
   line-height: 1.6;
   background-color: #f8f9fa; /* Light gray background */
+  /* Added transition for smooth scroll effect */
+    transition: background-color 0.7s ease;
+    
 }
 
-h1, h2, h3 {
+h2, h3 {
   color: #003366; /* Darker blue */
 }
 
@@ -16,6 +19,7 @@ h1, h2, h3 {
   overflow: hidden;
   margin: 0 auto;
   max-width: 1200px;
+  padding: 25px 0px;
 }
 
 /* Hero Section */
@@ -80,7 +84,7 @@ h1, h2, h3 {
   border-radius: 8px;
   text-align: center;
   flex: 1;
-  max-width: 250px;
+  width: 30%;
   margin: 10px; /* Added margin for better spacing */
   word-wrap: break-word;
 }
@@ -109,7 +113,7 @@ h1, h2, h3 {
   }
 
   .feature {
-    width: 100%; /* Full width for mobile screens */
+    width: 90%; /* Full width for mobile screens */
     max-width: 100%; /* Prevent squeezing */
   }
 
@@ -121,15 +125,25 @@ h1, h2, h3 {
 
 
 /* Mission & Vision */
-.mission-section, .vision-section {
-  background-color: #003366;
-  color: white;
-  padding: 50px 0;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px); /* Scroll animation */
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
+.mission-section{
+    background-color: #f0f2f4;
+    color: rgb(8, 8, 8);
+    padding: 50px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px); /* Scroll animation */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+.vision-section {
+    background-color: #003366;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px); /* Scroll animation */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
 
 /* Footer */
 .footer {
