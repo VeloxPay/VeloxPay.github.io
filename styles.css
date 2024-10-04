@@ -4,10 +4,11 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  background-color: #f8f9fa; /* Light gray background */
 }
 
 h1, h2, h3 {
-  color: #0A4B8E; /* Adjusted to match logo's deeper blue */
+  color: #003366; /* Darker blue */
 }
 
 .container {
@@ -18,21 +19,32 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(to right, #003C7E, #0096C7); /* Logo-inspired gradient */
+  background: linear-gradient(to right, #003366, #005B99); /* Dark blue gradient */
   color: white;
   padding: 100px 0;
   text-align: center;
+  animation: fadeIn 1.5s ease; /* Logo fade-in */
 }
 
-/* Logo in Hero Section */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .logo {
   width: 150px;
   height: auto;
   margin-bottom: 20px;
+  animation: scaleUp 1s ease;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 .cta-button {
-  background-color: #00C6FF; /* Lighter blue from logo */
+  background-color: #00C6FF;
   color: white;
   padding: 10px 20px;
   margin: 20px 10px;
@@ -40,11 +52,12 @@ h1, h2, h3 {
   border-radius: 4px;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #003C7E; /* Darker blue from logo */
+  background-color: #003366;
+  transform: scale(1.05); /* Button hover effect */
 }
 
 .cta-button.secondary {
@@ -54,7 +67,7 @@ h1, h2, h3 {
 
 /* Features Section */
 .features-section {
-  background-color: #F0F0F0; /* Light Gray for Clean Look */
+  background-color: #f0f0f0;
   padding: 50px 0;
 }
 
@@ -63,20 +76,23 @@ h1, h2, h3 {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px); /* Hidden initially */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Scroll animation */
 }
 
 .feature {
-  background-color: #E1E1E1; /* Silver */
+  background-color: #e1e1e1;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  flex: 1; /* Ensures the feature boxes stretch evenly */
+  flex: 1;
   min-width: 250px;
   max-width: 350px;
 }
 
 .feature h3 {
-  color: #003C7E; /* Blue for Feature Titles */
+  color: #003366;
 }
 
 .feature p {
@@ -84,7 +100,7 @@ h1, h2, h3 {
 }
 
 .feature-image {
-  width: 100%; /* Smaller image to avoid breaking the layout */
+  width: 100%;
   height: auto;
   margin-bottom: 15px;
   display: block;
@@ -92,7 +108,6 @@ h1, h2, h3 {
   margin-right: auto;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .features-grid {
     flex-direction: column;
@@ -100,35 +115,36 @@ h1, h2, h3 {
   }
 
   .feature {
-    width: 100%; /* Full width for mobile screens */
+    width: 100%;
     max-width: 500px;
   }
 
   .feature-image {
-    width: 60px; /* Smaller image for mobile */
+    width: 60px;
   }
 }
 
-
 /* Mission & Vision */
 .mission-section, .vision-section {
-  background-color: #003C7E; /* Dark blue from logo */
+  background-color: #003366;
   color: white;
   padding: 50px 0;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px); /* Scroll animation */
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 /* Footer */
 .footer {
-  background-color: #002850; /* Darker shade of blue for footer */
+  background-color: #002850;
   color: white;
   padding: 20px 0;
   text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .features-grid {
-    flex-direction: column;
-  }
+/* Scroll Animations */
+.scroll-reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
